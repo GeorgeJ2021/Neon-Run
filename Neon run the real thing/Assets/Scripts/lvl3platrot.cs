@@ -6,6 +6,7 @@ public class lvl3platrot : MonoBehaviour
 {
     public Animator animator;
     int isenteredHash;
+    public bool PlayerLanded=false;
     //public Collider collider;
         void Start()
     {
@@ -18,11 +19,10 @@ public class lvl3platrot : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-            Debug.Log("boop");
             if (other.gameObject.CompareTag("Player"))
             {
-                Debug.Log("ping");
                 animator.SetBool(isenteredHash,true);
+                PlayerLanded=true;
             }
     }
 }
