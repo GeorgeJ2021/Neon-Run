@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class BallGen : MonoBehaviour
 {
-    public GameObject ball1,ball2;
+    public GameObject ball1;
     public float speed = 4;
     public lvl3platrot lvl3;
+    public float st,rt;
+    public GameObject lone;
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("Ballgenerator", st, rt);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (lvl3.PlayerLanded==true)
+        //StartCoroutine(Ballgenerator());
+
+    }
+    void Ballgenerator()
+    {
+        if(lvl3.PlayerLanded==true)
         {
-            //Debug.Log("Beep");
-            Instantiate(ball1, transform.position, transform.rotation);
-            //b.velocity = transform.forward * speed;
+
+            lone=Instantiate(ball1, transform.position, transform.rotation);
+            lone.GetComponent<Rigidbody>().AddForce(-200.0f,0,0,ForceMode.Impulse);
+
+
         }
     }
-
 }
+
