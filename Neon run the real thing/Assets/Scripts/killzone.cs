@@ -23,6 +23,10 @@ public class killzone : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+        else
+        {
+            Destroy(other.gameObject);
+        }
              
 
     }

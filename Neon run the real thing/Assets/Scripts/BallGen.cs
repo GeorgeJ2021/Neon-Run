@@ -27,7 +27,7 @@ public class BallGen : MonoBehaviour
         {
 
             lone=Instantiate(ball1, transform.position, transform.rotation);
-            lone.GetComponent<Rigidbody>().AddForce(-200.0f,0,0,ForceMode.Impulse);
+            lone.GetComponent<Rigidbody>().AddForce(-5000.0f,0,0,ForceMode.Impulse);
 
 
         }
