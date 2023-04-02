@@ -21,6 +21,6 @@ public class checkpoint : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
        currentcheck= killzone.checkpoint;
-       SceneManager.LoadScene(currentcheck);
+       SceneManager.LoadSceneAsync(currentcheck);
     }
 }
