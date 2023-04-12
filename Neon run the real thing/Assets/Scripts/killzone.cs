@@ -17,9 +17,10 @@ public class killzone : MonoBehaviour
     {
         
     }
-     private void OnTriggerEnter(Collider other)
+    
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(1);
         }
@@ -28,6 +29,5 @@ public class killzone : MonoBehaviour
             Destroy(other.gameObject);
         }
              
-
     }
 }
