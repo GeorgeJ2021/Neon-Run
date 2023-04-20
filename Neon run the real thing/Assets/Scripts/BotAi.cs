@@ -7,6 +7,7 @@ public class BotAi : MonoBehaviour
 {
     public NavMeshAgent bot;
     public Transform player;
+    public lvl3platrot ll;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,10 @@ public class BotAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bot.SetDestination(player.position);
+        if(ll.PlayerLanded==true)
+        {
+            bot.SetDestination(player.position);
+        }
+        //bot.SetDestination(player.position);
     }
 }
